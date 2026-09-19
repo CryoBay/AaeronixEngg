@@ -139,18 +139,21 @@
               <img src="./images/industrial_blower.png" alt="Industrial Centrifugal Blower Manufacturer aaeronixengg.in" class="h-32 mx-auto mb-6 object-contain" loading="lazy">
               <h3 class="text-xl font-bold text-center">Industrial Blowers</h3>
               <p class="mt-4 text-slate-600 text-sm text-center">Engineered for robust performance and consistent airflow in heavy industry.</p>
+              <button type="button" data-modal-target="modal-cent-blower" class="modal-trigger block w-full text-center mt-4 text-blue-600 font-bold text-sm hover:underline">View Technical Chart &rarr;</button>
             </article>
 
             <article class="bg-white p-8 rounded-3xl shadow-sm card-hover border border-slate-100">
               <img src="./images/tube_axial_fan.png" alt="Tube Axial Fan Manufacturer aaeronixengg.in" class="h-32 mx-auto mb-6 object-contain" loading="lazy">
               <h3 class="text-xl font-bold text-center">Tube Axial Fans</h3>
               <p class="mt-4 text-slate-600 text-sm text-center">Optimal airflow efficiency designed to minimize energy consumption.</p>
+              <button type="button" data-modal-target="modal-axial-fan" class="modal-trigger block w-full text-center mt-4 text-blue-600 font-bold text-sm hover:underline">View Technical Chart &rarr;</button>
             </article>
 
             <article class="bg-white p-8 rounded-3xl shadow-sm card-hover border border-slate-100">
               <img src="./images/dust_collector.png" alt="Cyclone Dust Collector System aaeronixengg.in" class="h-32 mx-auto mb-6 object-contain" loading="lazy">
               <h3 class="text-xl font-bold text-center">Dust Collectors</h3>
               <p class="mt-4 text-slate-600 text-sm text-center">Low maintenance systems for high-efficiency industrial air filtration.</p>
+              <button type="button" data-modal-target="modal-cyclone" class="modal-trigger block w-full text-center mt-4 text-blue-600 font-bold text-sm hover:underline">View Technical Chart &rarr;</button>
             </article>
 
             <article class="bg-white p-8 rounded-3xl shadow-sm card-hover border border-slate-100">
@@ -274,6 +277,92 @@
       </div>
     </footer>
 
+    <!-- Technical Chart Modals -->
+    <div id="modal-cent-blower" class="product-modal hidden fixed inset-0 z-[60] items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm">
+      <div class="bg-white rounded-3xl shadow-2xl w-full max-w-6xl max-h-[85vh] overflow-y-auto relative">
+        <div class="sticky top-0 z-10 bg-white border-b border-slate-100 px-8 py-6 flex items-center justify-between rounded-t-3xl">
+          <h3 class="text-2xl font-black text-slate-900">Technical Chart</h3>
+          <button type="button" class="close-modal-btn text-slate-400 hover:text-slate-900 text-3xl leading-none" aria-label="Close">&times;</button>
+        </div>
+        <div class="p-8">
+          <p class="text-slate-600 mb-2"><strong>Industry reference chart</strong> &mdash; approximate capacity in CFM at N.T.P. for a standard single-stage centrifugal blower, compiled from published manufacturer selection charts. Actual Aaeronix Engineering unit performance depends on impeller design and may vary &mdash; contact us for a certified performance quote for your duty point.</p>
+          <div class="flex gap-2 mb-6" role="tablist" aria-label="Motor speed">
+            <button type="button" class="rpm-tab px-4 py-2 rounded-full text-sm font-bold border border-blue-600" data-rpm="960">960 RPM</button>
+            <button type="button" class="rpm-tab px-4 py-2 rounded-full text-sm font-bold border border-blue-600" data-rpm="1400">1400 RPM</button>
+            <button type="button" class="rpm-tab px-4 py-2 rounded-full text-sm font-bold border border-blue-600" data-rpm="2800">2800 RPM</button>
+          </div>
+          <div class="overflow-x-auto rounded-2xl border border-slate-100">
+            <table class="min-w-full text-xs md:text-sm text-center border-collapse whitespace-nowrap">
+              <thead class="bg-blue-600 text-white">
+                <tr>
+                  <th class="p-3 font-bold sticky left-0 bg-blue-600">Motor H.P.</th>
+                  <th class="p-3">1&Prime;</th><th class="p-3">2&Prime;</th><th class="p-3">3&Prime;</th><th class="p-3">4&Prime;</th><th class="p-3">5&Prime;</th><th class="p-3">6&Prime;</th><th class="p-3">8&Prime;</th><th class="p-3">10&Prime;</th><th class="p-3">12&Prime;</th><th class="p-3">16&Prime;</th><th class="p-3">20&Prime;</th><th class="p-3">24&Prime;</th><th class="p-3">28&Prime;</th><th class="p-3">32&Prime;</th><th class="p-3">36&Prime;</th><th class="p-3">48&Prime;</th><th class="p-3">50&Prime;</th>
+                </tr>
+              </thead>
+              <tbody id="cent-blower-tbody" class="[&>tr:nth-child(odd)]:bg-slate-50"></tbody>
+            </table>
+          </div>
+          <p class="text-xs text-slate-400 mt-4">Pressure in inches W.G. &middot; Source: published centrifugal blower selection charts (industry-common reference).</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-axial-fan" class="product-modal hidden fixed inset-0 z-[60] items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm">
+      <div class="bg-white rounded-3xl shadow-2xl w-full max-w-6xl max-h-[85vh] overflow-y-auto relative">
+        <div class="sticky top-0 z-10 bg-white border-b border-slate-100 px-8 py-6 flex items-center justify-between rounded-t-3xl">
+          <h3 class="text-2xl font-black text-slate-900">Technical Data</h3>
+          <button type="button" class="close-modal-btn text-slate-400 hover:text-slate-900 text-3xl leading-none" aria-label="Close">&times;</button>
+        </div>
+        <div class="p-8">
+          <p class="text-slate-600 mb-6"><strong>Industry reference chart</strong> &mdash; a commonly published axial flow fan performance table. *Motor capacity in Watts where marked. The last six columns show Capacity (CFM) at the stated static pressure (mm W.G.). Actual Aaeronix Engineering unit performance may vary &mdash; contact us for a certified performance quote.</p>
+          <div class="overflow-x-auto rounded-2xl border border-slate-100">
+            <table class="min-w-full text-xs md:text-sm text-center border-collapse whitespace-nowrap">
+              <thead class="bg-blue-600 text-white">
+                <tr>
+                  <th class="p-3 sticky left-0 bg-blue-600">Fan Size (in.)</th>
+                  <th class="p-3">mm</th>
+                  <th class="p-3">RPM</th>
+                  <th class="p-3">Direct Drive H.P.</th>
+                  <th class="p-3">V-Belt Drive H.P.</th>
+                  <th class="p-3">Phase</th>
+                  <th class="p-3">Free Air (CFM)</th>
+                  <th class="p-3">5mm</th><th class="p-3">10mm</th><th class="p-3">15mm</th><th class="p-3">20mm</th><th class="p-3">25mm</th><th class="p-3">35mm</th>
+                </tr>
+              </thead>
+              <tbody id="axial-fan-tbody" class="[&>tr:nth-child(odd)]:bg-slate-50"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-cyclone" class="product-modal hidden fixed inset-0 z-[60] items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm">
+      <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[85vh] overflow-y-auto relative">
+        <div class="sticky top-0 z-10 bg-white border-b border-slate-100 px-8 py-6 flex items-center justify-between rounded-t-3xl">
+          <h3 class="text-2xl font-black text-slate-900">Technical Chart</h3>
+          <button type="button" class="close-modal-btn text-slate-400 hover:text-slate-900 text-3xl leading-none" aria-label="Close">&times;</button>
+        </div>
+        <div class="p-8">
+          <p class="text-slate-600 mb-6"><strong>Industry reference chart</strong> &mdash; typical cyclone dust collector sizing/rating data compiled from published manufacturer specification sheets, for highly abrasive and sticky dusts across Boiler, Cement, Concrete, Power, Sugar, Pharmaceutical, Agriculture, Paper & Pulp, Food and Fertilizer industries. Actual Aaeronix Engineering unit performance may vary &mdash; contact us for a certified performance quote for your duty point.</p>
+          <div class="overflow-x-auto rounded-2xl border border-slate-100">
+            <table class="min-w-full text-xs md:text-sm text-center border-collapse whitespace-nowrap">
+              <thead class="bg-blue-600 text-white">
+                <tr>
+                  <th class="p-3 sticky left-0 bg-blue-600">Model</th>
+                  <th class="p-3">Nominal Airflow (CFM)</th>
+                  <th class="p-3">Ext. Static Pressure (&Prime;WG)</th>
+                  <th class="p-3">Motor (H.P.)</th>
+                  <th class="p-3">Inlet (in.)</th>
+                </tr>
+              </thead>
+              <tbody id="cyclone-tbody" class="[&>tr:nth-child(odd)]:bg-slate-50"></tbody>
+            </table>
+          </div>
+          <p class="text-xs text-slate-400 mt-4">Based on clean-filter conditions. Source: published cyclone dust collector rating tables (industry-common reference).</p>
+        </div>
+      </div>
+    </div>
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
       
@@ -325,6 +414,173 @@
             status.className = "mt-4 text-red-500 font-bold";
           }
       });
+
+      // Technical Chart Modals
+      (function () {
+        function renderRows(tbodyId, rows, firstColClass) {
+          const tbody = document.getElementById(tbodyId);
+          tbody.innerHTML = rows.map(row => {
+            const cells = row.map((val, i) => {
+              const cls = i === 0 ? (firstColClass || "p-3 font-bold bg-white sticky left-0") : "p-3";
+              return `<td class="${cls}">${val}</td>`;
+            }).join("");
+            return `<tr>${cells}</tr>`;
+          }).join("");
+        }
+
+        const DASH = "&ndash;";
+
+        // Source: published centrifugal blower selection charts (industry
+        // reference — "Approximate capacity in Cu. Feet/Minute at N.T.P."),
+        // covering standard 960 / 1400 / 2800 RPM motor speeds.
+        const centBlowerDataByRpm = {
+          960: [
+            [0.25, 1000, 500, 300, 200, DASH, 100, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [0.5, 2000, 1000, 700, 500, DASH, 400, 300, 100, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [0.75, 3000, 1600, 1100, 800, DASH, 600, 400, 200, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [1, 4000, 2200, 1500, 1100, DASH, 800, 600, 400, 300, 300, 100, DASH, DASH, DASH, DASH, DASH, DASH],
+            [1.5, 5600, 3200, 2200, 1700, DASH, 1300, 1000, 700, 400, 400, 200, DASH, DASH, DASH, DASH, DASH, DASH],
+            [2, 6200, 4100, 2900, 2200, DASH, 1800, 1400, 1000, 700, 500, 300, 200, DASH, DASH, DASH, DASH, DASH],
+            [3, DASH, 6100, 4300, 3400, DASH, 2700, 2200, 1600, 1200, 900, 500, 400, 300, 200, 100, DASH, DASH],
+            [5, DASH, 10100, 6900, 5600, DASH, 4600, 3800, 2800, 2100, 1700, 1100, 700, 600, 500, 400, 200, DASH],
+            [7.5, DASH, 14400, 10300, 8200, DASH, 6800, 5800, 4300, 3300, 2700, 1800, 1300, 900, 800, 600, 600, 400],
+            [10, DASH, 17800, 13800, 11600, DASH, 8900, 7300, 5800, 4600, 3700, 2500, 1900, 1300, 1000, 900, 800, 500],
+            [12.5, DASH, DASH, 17000, 13000, DASH, 11100, 9400, 7200, 5700, 4700, 3400, 2500, 1900, 1400, 1100, 1000, 700],
+            [15, DASH, DASH, 20000, 15500, DASH, 13000, 11200, 8700, 7000, 5700, 4200, 3100, 2400, 1800, 1400, 1200, 900],
+            [20, DASH, DASH, 27300, 20700, DASH, 17000, 14700, 11500, 9400, 7800, 5700, 4400, 3500, 2700, 2100, 1700, 1200],
+            [25, DASH, DASH, 31400, 26000, DASH, 20700, 18100, 14300, 11700, 9800, 7300, 5700, 4600, 3700, 2900, 2300, 1600],
+            [30, DASH, DASH, 32900, 30200, DASH, 24800, 21400, 16800, 13900, 11700, 8800, 7000, 5600, 4600, 3700, 3000, 1900],
+            [40, DASH, DASH, DASH, 39000, DASH, 33100, 27700, 22100, 18300, 15600, 11900, 9500, 7800, 6500, 5400, 4500, 2700],
+            [50, DASH, DASH, DASH, 47900, DASH, 40500, 34500, 27200, 22600, 19300, 15000, 12000, 9900, 8300, 7100, 6000, 3600],
+            [75, DASH, DASH, DASH, DASH, DASH, 53000, 51000, 39100, 33100, 28500, 22400, 18400, 15300, 13000, 11200, 9700, 6300],
+            [100, DASH, DASH, DASH, DASH, DASH, DASH, 53000, 51800, 44200, 37300, 29700, 24600, 20700, 17600, 15300, 13400, 9100],
+          ],
+          1400: [
+            [0.25, 1000, 500, 300, 200, DASH, 100, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [0.5, 1900, 1000, 700, 500, DASH, 400, 300, 200, 100, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [0.75, 2800, 1600, 1100, 800, DASH, 600, 500, 300, 200, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [1, DASH, 2000, 1400, 1100, DASH, 800, 700, 500, 300, 300, 100, DASH, DASH, DASH, DASH, DASH, DASH],
+            [1.5, DASH, 3000, 2100, 1700, DASH, 1300, 1100, 800, 600, 400, 200, DASH, DASH, DASH, DASH, DASH, DASH],
+            [2, DASH, 4000, 2800, 2200, DASH, 1800, 1500, 1000, 800, 600, 400, 200, 100, DASH, DASH, DASH, DASH],
+            [3, DASH, 5800, 4100, 3300, DASH, 2700, 2200, 1700, 1300, 1000, 700, 400, 300, 200, 100, DASH, DASH],
+            [5, DASH, 8400, 6800, 5300, DASH, 4400, 3700, 2800, 2300, 1800, 1300, 900, 600, 500, 400, 300, 200],
+            [7.5, DASH, DASH, 9900, 8300, DASH, 6400, 5500, 4300, 3500, 2800, 2000, 1500, 1100, 900, 700, 600, 400],
+            [10, DASH, DASH, 12800, 10300, DASH, 8400, 7200, 5700, 4600, 3800, 2900, 2200, 1700, 1300, 1000, 800, 600],
+            [12.5, DASH, DASH, 15400, 13100, DASH, 10300, 8900, 7000, 5800, 4800, 3600, 2800, 2200, 1800, 1400, 1100, 700],
+            [15, DASH, DASH, DASH, 14900, DASH, 12400, 10600, 8400, 6900, 5800, 4400, 3400, 2700, 2200, 1800, 1500, 900],
+            [20, DASH, DASH, DASH, 19300, DASH, 16400, 13700, 10900, 9100, 7700, 5900, 4700, 3800, 3200, 2600, 2200, 1100],
+            [25, DASH, DASH, DASH, 24800, DASH, 20000, 17200, 13500, 11200, 9600, 7400, 5900, 4900, 4100, 3400, 2900, 1700],
+            [30, DASH, DASH, DASH, DASH, DASH, 23600, 20600, 16000, 13300, 11400, 8900, 7200, 5900, 5000, 4300, 3600, 2300],
+            [40, DASH, DASH, DASH, DASH, DASH, 30400, 26700, 20700, 17400, 15000, 11800, 9700, 8100, 6800, 5900, 5100, 3400],
+            [50, DASH, DASH, DASH, DASH, DASH, 32900, 32800, 25900, 21400, 18500, 14700, 12200, 10200, 8700, 7500, 6600, 4400],
+            [75, DASH, DASH, DASH, DASH, DASH, DASH, 43500, 38100, 31100, 27200, 21600, 18100, 15400, 13300, 11600, 10200, 7300],
+            [100, DASH, DASH, DASH, DASH, DASH, DASH, DASH, 49200, 41500, 35100, 28400, 23900, 20500, 17900, 15700, 13800, 10100],
+          ],
+          2800: [
+            [0.25, 600, 400, 300, 200, DASH, 200, 100, 100, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [0.5, DASH, 1000, 700, 500, DASH, 400, 300, 200, 100, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [0.75, DASH, 1400, 1000, 800, DASH, 600, 500, 300, 300, 200, DASH, DASH, DASH, DASH, DASH, DASH, DASH],
+            [1, DASH, 1900, 1400, 1000, DASH, 900, 700, 500, 400, 300, 200, 100, DASH, DASH, DASH, DASH, DASH],
+            [1.5, DASH, DASH, 2000, 1500, DASH, 1300, 1000, 800, 600, 500, 300, 200, 100, DASH, DASH, DASH, DASH],
+            [2, DASH, DASH, 2600, 2100, DASH, 1700, 1400, 1100, 900, 700, 500, 400, 200, 200, 100, DASH, DASH],
+            [3, DASH, DASH, 3700, 3000, DASH, 2400, 2100, 1600, 1300, 1100, 800, 500, 400, 300, 300, 200, DASH],
+            [5, DASH, DASH, DASH, 4800, DASH, 4000, 3400, 2700, 2200, 1900, 1400, 1100, 800, 600, 600, 400, 200],
+            [7.5, DASH, DASH, DASH, 5900, DASH, 5900, 5100, 3900, 3300, 2800, 2100, 1700, 1300, 1100, 1000, 800, 400],
+            [10, DASH, DASH, DASH, DASH, DASH, 7500, 6600, 5100, 4300, 3600, 2900, 2300, 1900, 1600, 1400, 1200, 700],
+            [12.5, DASH, DASH, DASH, DASH, DASH, 8200, 8100, 6400, 5300, 4500, 3600, 2900, 2500, 2000, 1700, 1500, 1000],
+            [15, DASH, DASH, DASH, DASH, DASH, DASH, 9500, 7700, 6200, 5400, 4300, 3500, 3000, 2500, 2100, 1800, 1200],
+            [20, DASH, DASH, DASH, DASH, DASH, DASH, 10800, 10000, 8200, 7100, 5500, 4700, 3900, 3400, 2900, 2500, 1800],
+            [25, DASH, DASH, DASH, DASH, DASH, DASH, DASH, 12200, 10200, 8700, 7000, 5900, 5000, 4400, 3800, 3300, 2300],
+            [30, DASH, DASH, DASH, DASH, DASH, DASH, DASH, 14300, 12200, 10400, 8400, 7000, 6000, 5200, 4600, 4100, 2900],
+            [40, DASH, DASH, DASH, DASH, DASH, DASH, DASH, 16600, 15900, 13900, 11000, 9200, 7900, 7000, 6100, 5400, 4000],
+            [50, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, 19500, 17200, 13500, 11400, 9900, 8600, 7700, 6800, 5100],
+            [75, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, 25000, 20300, 16700, 14500, 12900, 11500, 10300, 7800],
+            [100, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, DASH, 28500, 26600, 22000, 19100, 16900, 15100, 13700, 10500],
+          ],
+        };
+
+        function renderCentBlower(rpm) {
+          renderRows("cent-blower-tbody", centBlowerDataByRpm[rpm], "p-3 font-bold bg-blue-50 sticky left-0");
+          document.querySelectorAll(".rpm-tab").forEach(tab => {
+            const active = tab.dataset.rpm === String(rpm);
+            tab.classList.toggle("bg-blue-600", active);
+            tab.classList.toggle("text-white", active);
+            tab.classList.toggle("text-blue-600", !active);
+          });
+        }
+        renderCentBlower(1400);
+        document.querySelectorAll(".rpm-tab").forEach(tab => {
+          tab.addEventListener("click", () => renderCentBlower(tab.dataset.rpm));
+        });
+
+        // Source: Donaldson Torit "Cyclone Dust Collectors" multiple rating table
+        // (Models 12-44) — industry reference for cyclone sizing.
+        const cycloneData = [
+          ["12", "300 &ndash; 540", "5.6 &ndash; 4.1", "3/4", 4],
+          ["16", "860 &ndash; 1200", "7.9 &ndash; 4.6", 2, 6],
+          ["20-3", "1250 &ndash; 2000", "7.5 &ndash; 3.7", 3, 8],
+          ["20-5", "1500 &ndash; 2500", "11.4 &ndash; 5.0", 5, 8],
+          ["24", "1950 &ndash; 3500", "13.4 &ndash; 4.4", 7.5, 10],
+          ["30-10", "3000 &ndash; 4500", "9.9 &ndash; 5.0", 10, 12],
+          ["30-15", "4000 &ndash; 5600", "11.0 &ndash; 4.9", 15, 12],
+          ["36-20", "4300 &ndash; 7000", "11.4 &ndash; 4.9", 20, 14],
+          ["36-25", "4500 &ndash; 7500", "14.9 &ndash; 6.3", 25, 14],
+          ["36-30", "5000 &ndash; 8000", "16.1 &ndash; 7.1", 30, 14],
+          ["44-40", "8000 &ndash; 11,500", "15.1 &ndash; 5.5", 40, 18],
+          ["44-50", "8000 &ndash; 13,000", "18.8 &ndash; 7.0", 50, 18],
+        ];
+        renderRows("cyclone-tbody", cycloneData, "p-3 font-bold bg-blue-50 sticky left-0");
+
+        const axialFanData = [
+          [12, 305, 1440, "90*", "1/8", 1, 1000, 900, 800, 500, DASH, DASH, DASH],
+          [12, 305, 2880, "340*", "1/2", "1&3", 1600, 1400, 1200, 1000, 700, DASH, DASH],
+          [12, 305, 2880, "1/2", "1/2", "1&3", 1900, 1500, 1350, 1200, 1000, 600, DASH],
+          [15, 380, 1440, "150*", "1/8", 1, 2050, 1950, 1600, 1450, 950, DASH, DASH],
+          [18, 455, 1440, "340*", "1/2", "1&3", 3060, 2850, 2600, 2250, 1950, DASH, DASH],
+          [18, 455, 2880, "1 1/2", "1 1/2", 3, 5500, 4500, 3500, 3000, 2500, 2000, 1800],
+          [24, 610, 1440, 1, "1 1/2", 3, 6500, 6410, 5550, 4689, 3220, DASH, DASH],
+          [27.5, 700, 1440, 2, 3, 3, 10600, 10550, 10250, 8200, 7600, 5850, DASH],
+          [31.5, 800, 900, 1, "1 1/2", 3, 10500, 9350, 7600, 5850, DASH, DASH, DASH],
+          [31.5, 800, 1440, 5, 5, 3, 16000, 15400, 14600, 13450, 12300, 11400, 8190],
+          [36, 915, 900, 3, 3, 3, 19500, 17500, 15400, 12000, 10000, DASH, DASH],
+          [36, 915, 1440, "7 1/2", "7 1/2", 3, 26000, 24500, 23100, 21600, 20000, 19000, 17500],
+          [39.5, 1000, 900, 3, 3, 3, 21100, 19300, 18150, 15800, 13450, DASH, DASH],
+          [47.5, 1200, 750, 5, 5, 3, 28600, 25200, 22800, 23000, DASH, DASH, DASH],
+          [47.5, 1200, 900, "7 1/2", "7 1/2", 3, 35700, 35900, 32800, 31000, 29200, 26500, 18700],
+        ];
+        renderRows("axial-fan-tbody", axialFanData, "p-3 font-bold bg-blue-50 sticky left-0");
+
+        function openModal(modal) {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          document.body.classList.add("overflow-hidden");
+        }
+        function closeModal(modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          document.body.classList.remove("overflow-hidden");
+        }
+
+        document.querySelectorAll(".modal-trigger").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const modal = document.getElementById(btn.dataset.modalTarget);
+            if (modal) openModal(modal);
+          });
+        });
+
+        document.querySelectorAll(".product-modal").forEach(modal => {
+          modal.querySelector(".close-modal-btn").addEventListener("click", () => closeModal(modal));
+          modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal(modal);
+          });
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            document.querySelectorAll(".product-modal:not(.hidden)").forEach(closeModal);
+          }
+        });
+      })();
     </script>
   </body>
 </html>
